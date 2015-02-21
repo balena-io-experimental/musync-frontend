@@ -1,0 +1,64 @@
+<form class="form-inline" name="newSongForm" ng-submit="addSong()">
+  <div class="form-group">
+    <input type="text"
+      class="form-control"
+      id="artist"
+      placeholder="Artist"
+      ng-model="newSong.artist"
+      required>
+  </div>
+
+  <div class="form-group">
+    <input type="text"
+      class="form-control"
+      id="title"
+      placeholder="Title"
+      ng-model="newSong.title"
+      required>
+  </div>
+
+  <button type="submit"
+    class="btn btn-primary"
+    ng-disabled="newSongForm.$invalid && newSongForm.$dirty">Add</button>
+</form>
+
+<hr>
+
+<div class="toolbar">
+  <div class="btn-group" role="group" aria-label="toolbar">
+    <button type="button"
+      class="btn btn-default"
+      ng-click="play()"
+      ng-disabled="isPlaying()">
+      <span class="glyphicon glyphicon-play"></span> Play</button>
+
+    <button type="button"
+      class="btn btn-default"
+      ng-click="stop()"
+      ng-disabled="!isPlaying()">
+      <span class="glyphicon glyphicon-stop"></span> Stop</button>
+
+    <button type="button"
+      class="btn btn-default"
+      ng-click="previous()"
+      ng-disabled="!hasPreviousSong()">
+      <span class="glyphicon glyphicon-step-backward"></span> Previous</button>
+
+    <button type="button"
+      class="btn btn-default"
+      ng-click="next()"
+      ng-disabled="!hasNextSong()">
+      <span class="glyphicon glyphicon-step-forward"></span> Next</button>
+  </div>
+</div>
+
+<ul class="list-group">
+  <a class="list-group-item"
+    ng-repeat="song in playlist.songs"
+    ng-click="playSong($index)"
+    ng-class="{ 'active': playlist.current == $index }">
+
+    <span class="badge" ng-click="remove($index)">X</span>
+    <span>{{ song.artist }} - {{ song.title }}</span>
+  </a>
+</ul>
