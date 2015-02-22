@@ -12,6 +12,11 @@ Build & development
 
 Run `grunt` for building and `grunt serve` for preview.
 
+Customisation
+-------------
+
+Head over to [app/scripts/app.coffee](https://github.com/jviotti/musync-frontend/blob/master/app/scripts/app.coffee) and change the `URL` constant to your [Firebase](https://www.firebase.com) instance.
+
 Tests
 -----
 
