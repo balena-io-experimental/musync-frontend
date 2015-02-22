@@ -5,6 +5,8 @@ This is the Musync Frontend application, used to control the song playlist and p
 
 [See the Musync project for more information](https://github.com/resin-io/musync)
 
+![MuSync Frontend Screenshot](https://raw.githubusercontent.com/jviotti/musync-frontend/master/screenshots/screenshot.png)
+
 Build & development
 -------------------
 
