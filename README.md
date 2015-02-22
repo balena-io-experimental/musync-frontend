@@ -1,12 +1,32 @@
-# musync-frontend
+Musync Frontend
+---------------
 
-This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
-version 0.11.1.
+This is the Musync Frontend application, used to control the song playlist and play state for the MuSync clients.
 
-## Build & development
+[See the Musync project for more information](https://github.com/resin-io/musync)
+
+Build & development
+-------------------
 
 Run `grunt` for building and `grunt serve` for preview.
 
-## Testing
+Tests
+-----
 
 Running `grunt test` will run the unit tests with karma.
+
+Contribute
+----------
+
+- Issue Tracker: [github.com/resin-io/musync-frontend/issues](https://github.com/resin-io/musync-frontend/issues)
+- Source Code: [github.com/resin-io/musync-frontend](https://github.com/resin-io/musync-frontend)
+
+Support
+-------
+
+If you're having any problem, please [raise an issue](https://github.com/resin-io/musync-frontend/issues/new) on GitHub.
+
+License
+-------
+
+The project is licensed under the MIT license.
