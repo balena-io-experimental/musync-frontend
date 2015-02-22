@@ -41,6 +41,7 @@ angular.module('MuSyncApp')
 
   $scope.remove = (index) ->
     $scope.playlist.songs.splice(index, 1)
+    $scope.playSong($scope.playlist.current)
 
   $scope.isPlaying = ->
     return $scope.playlist?.current?
