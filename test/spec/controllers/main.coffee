@@ -155,6 +155,30 @@ describe 'Controller: MainCtrl', ->
       scope.addSong()
       expect(scope.newSong).toEqual({})
 
+    it 'should not add anything if no artist', ->
+      scope.playlist.songs = []
+      scope.newSong = { title: 'Shake It Off' }
+      scope.addSong()
+      expect(scope.playlist.songs.length).toBe(0)
+
+    it 'should not add anything if artist is an empty string', ->
+      scope.playlist.songs = []
+      scope.newSong = { artist: '', title: 'Shake It Off' }
+      scope.addSong()
+      expect(scope.playlist.songs.length).toBe(0)
+
+    it 'should not add anything if no title', ->
+      scope.playlist.songs = []
+      scope.newSong = { artist: 'Taylor Swift' }
+      scope.addSong()
+      expect(scope.playlist.songs.length).toBe(0)
+
+    it 'should not add anything if title is an empty string', ->
+      scope.playlist.songs = []
+      scope.newSong = { artist: 'Taylor Swift', title: '' }
+      scope.addSong()
+      expect(scope.playlist.songs.length).toBe(0)
+
   describe '.remove()', ->
 
     it 'should remove the song from the playlist', ->

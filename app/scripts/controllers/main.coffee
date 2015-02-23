@@ -44,6 +44,8 @@ angular.module('MuSyncApp')
   # TODO: Make this function accept a song argument instead
   # of depending on previously saved state.
   $scope.addSong = ->
+    return if _.isEmpty($scope.newSong.artist)
+    return if _.isEmpty($scope.newSong.title)
     $scope.playlist.songs.push($scope.newSong)
     $scope.newSong = {}
 
