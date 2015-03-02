@@ -10,6 +10,18 @@ This is the Musync Frontend application, used to control the song playlist and p
 Build & development
 -------------------
 
+Make sure you have `grunt-cli` installed globally:
+
+```sh
+$ npm install -g grunt-cli
+```
+
+In the repo directory, do an `npm install`:
+
+```sh
+$ npm install
+```
+
 Run `grunt` for building and `grunt serve` for preview.
 
 Customisation
