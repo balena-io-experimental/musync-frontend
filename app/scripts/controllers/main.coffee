@@ -46,6 +46,7 @@ angular.module('MuSyncApp')
   $scope.addSong = ->
     return if _.isEmpty($scope.newSong.artist)
     return if _.isEmpty($scope.newSong.title)
+    $scope.playlist.songs ?= []
     $scope.playlist.songs.push($scope.newSong)
     $scope.newSong = {}
 
