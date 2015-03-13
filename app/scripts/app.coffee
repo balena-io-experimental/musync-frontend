@@ -14,7 +14,7 @@ angular
     'ngTouch'
     'firebase'
   ]
-  .constant('URL', 'https://musync.firebaseio.com/playlist')
+  .constant('URL', "#{window.location.protocol}//#{window.location.host}/playlist")
   .config ($routeProvider) ->
     $routeProvider
       .when '/',

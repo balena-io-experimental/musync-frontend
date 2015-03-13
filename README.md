@@ -7,42 +7,6 @@ This is the Musync Frontend application, used to control the song playlist and p
 
 ![MuSync Frontend Screenshot](https://raw.githubusercontent.com/jviotti/musync-frontend/master/screenshots/screenshot.png)
 
-Preview
--------
-
-Go to the [dist/](https://github.com/resin-io/musync-frontend/tree/master/dist) directory and start a web server:
-
-```sh
-$ cd dist/ && python -m SimpleHTTPServer
-```
-
-Then point your browser to [0.0.0.0:8000](http://0.0.0.0:8000).
-
-If you want to change the firebase endpoint, you will need to recompile the application.
-
-Follow the instructions at the [customisation section](https://github.com/resin-io/musync-frontend#customisation) and recompile with:
-
-```sh
-$ grunt build
-```
-
-Build & development
--------------------
-
-Make sure you have `grunt-cli` installed globally:
-
-```sh
-$ npm install -g grunt-cli
-```
-
-In the repo directory, do an `npm install`:
-
-```sh
-$ npm install
-```
-
-Run `grunt` for building and `grunt serve` for preview.
-
 Deploy to Firebase
 ------------------
 
@@ -62,10 +26,22 @@ $ firebase deploy
 
 Make sure you build the application with `grunt build` before deploying if you made any customisation to the application source code.
 
-Customisation
--------------
+Build & development
+-------------------
 
-Head over to [app/scripts/app.coffee](https://github.com/jviotti/musync-frontend/blob/master/app/scripts/app.coffee) and change the `URL` constant to your [Firebase](https://www.firebase.com) instance.
+Make sure you have `grunt-cli` installed globally:
+
+```sh
+$ npm install -g grunt-cli
+```
+
+In the repo directory, do an `npm install`:
+
+```sh
+$ npm install
+```
+
+Run `grunt` for building and `grunt serve` for preview.
 
 Tests
 -----
