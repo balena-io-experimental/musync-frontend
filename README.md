@@ -7,6 +7,25 @@ This is the Musync Frontend application, used to control the song playlist and p
 
 ![MuSync Frontend Screenshot](https://raw.githubusercontent.com/jviotti/musync-frontend/master/screenshots/screenshot.png)
 
+Preview
+-------
+
+Go to the [dist/](https://github.com/resin-io/musync-frontend/tree/master/dist) directory and start a web server:
+
+```sh
+$ cd dist/ && python -m SimpleHTTPServer
+```
+
+Then point your browser to [0.0.0.0:8000](http://0.0.0.0:8000).
+
+If you want to change the firebase endpoint, you will need to recompile the application.
+
+Follow the instructions at the [customisation section](https://github.com/resin-io/musync-frontend#customisation) and recompile with:
+
+```sh
+$ grunt build
+```
+
 Build & development
 -------------------
 
