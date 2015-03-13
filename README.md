@@ -43,6 +43,25 @@ $ npm install
 
 Run `grunt` for building and `grunt serve` for preview.
 
+Deploy to Firebase
+------------------
+
+In order to deploy the application to Firebase, change the application name in [firebase.json](https://github.com/resin-io/musync-frontend/blob/master/firebase.json) to your own application name (in the "firebase" key).
+
+Install the [Firebase Command Line Tool](https://www.firebase.com/docs/hosting/command-line-tool.html) if you didn't already:
+
+```sh
+$ npm install -g firebase-tools
+```
+
+And deploy with the following command within the application directory:
+
+```sh
+$ firebase deploy
+```
+
+Make sure you build the application with `grunt build` before deploying if you made any customisation to the application source code.
+
 Customisation
 -------------
 
