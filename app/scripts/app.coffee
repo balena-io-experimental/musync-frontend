@@ -14,7 +14,9 @@ angular
     'ngTouch'
     'firebase'
   ]
-  .constant('URL', "#{window.location.protocol}//#{window.location.host}/playlist")
+  .constant('URL', \
+  "#{window.location.protocol}//#{window.location.host.  \
+  replace('firebaseapp', 'firebaseio')}/playlist")
   .config ($routeProvider) ->
     $routeProvider
       .when '/',
@@ -22,4 +24,3 @@ angular
         controller: 'MainCtrl'
       .otherwise
         redirectTo: '/'
-
